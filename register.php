@@ -49,7 +49,7 @@
 			  <!-- <option selected value="admin">admin</option> -->
 		  </select>
 		  <span>
-	     Have account <a href="login.php">Login Here</a><br /><br />
+	     Have account <a href="index.php">Login Here</a><br /><br />
 	   </span>
 		 
 		  <button type="submit" 
