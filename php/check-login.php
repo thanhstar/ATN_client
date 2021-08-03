@@ -1,6 +1,6 @@
 <?php  
 session_start();
-include "db_conn.php";
+include "../db_conn.php";
 
 if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role'])) {
 
@@ -36,7 +36,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role
         		$_SESSION['role'] = $row['role'];
         		$_SESSION['username'] = $row['username'];
 
-        		header("Location:admin.php");
+        		header("Location:../admin.php");
 
         	}
         	else if ($row['password'] === $password && $row['role'] == "user") {
@@ -45,17 +45,17 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role
         		$_SESSION['role'] = $row['role'];
         		$_SESSION['username'] = $row['username'];
 
-        		header("Location:home.php");
+        		header("Location:../home.php");
         	}
         	else {
-        		header("Location:index.php?error=Incorect User name or password");
+        		header("Location:../index.php?error=Incorect User name or password");
         	}
         }else {
-        	header("Location:index.php?error=Incorect User name or password");
+        	header("Location:../index.php?error=Incorect User name or password");
         }
 
 	}
 	
 }else {
-	header("Location:index.php");
+	header("Location:../index.php");
 }
